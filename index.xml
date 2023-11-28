@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My New Hugo Site</title>
+    <link>https://yzccjg.github.io/blog/</link>
+    <description>Recent content on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 28 Nov 2023 17:05:31 +0800</lastBuildDate>
+    <atom:link href="https://yzccjg.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>汇编语言</title>
+      <link>https://yzccjg.github.io/blog/%E5%B7%A5%E5%AD%A6/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</link>
+      <pubDate>Tue, 28 Nov 2023 17:05:31 +0800</pubDate>
+      <guid>https://yzccjg.github.io/blog/%E5%B7%A5%E5%AD%A6/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo的基本使用</title>
+      <link>https://yzccjg.github.io/blog/hugo%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Tue, 28 Nov 2023 10:48:36 +0800</pubDate>
+      <guid>https://yzccjg.github.io/blog/hugo%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</guid>
+      <description>基本配置
+将draft默认配置为false 修改archetypes目录下的default.md文件 draft: false 修改默认的作者 在主题下的hugo.toml文件中修改 author = &amp;#34;yzchugo.toml&amp;#34; </description>
+    </item>
+    <item>
+      <title>使用hugo在github上部署个人博客的详细教程</title>
+      <link>https://yzccjg.github.io/blog/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8github%E4%B8%8A%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Tue, 28 Nov 2023 10:23:48 +0800</pubDate>
+      <guid>https://yzccjg.github.io/blog/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8github%E4%B8%8A%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</guid>
+      <description>使用hugo在github上部署个人博客的详细教程 一、github端的操作
+​	1.在github网站的全局设置中设置一个token。
+​	2.创建一个名称为blog的仓库用来存放hugo博客的源码。
+​	3.设置仓库的secrets中actions的value为全局token，并将这个secret的key名称和hugo中.yml文件中的配置对应,此处配置为PERSONAL_TOKEN。
+二、本地配置操作
+​	1.初始化一个hugo网站
+hugo new site blog ​	2.git初始化 加载主题 配置主题 配置baseurl
+git init git submodule add https://github.com/yzccjg/dark-theme-editor.git themes/dark-theme-editor 在hugo.toml文件中配置 theme = &amp;#39;dark-theme-editor&amp;#39; 在hugo.toml文件中配置 baseURL = &amp;#39;https://yzccjg.github.io/blog/&amp;#39; ​
+​	3.配置.yml文件，在根目录下新建.github&amp;gt;workflows&amp;gt;hugo-deploy.yml
+name: deploy on: push: workflow_dispatch: jobs: build: runs-on: ubuntu-latest steps: - name: Checkout uses: actions/checkout@v2 with: submodules: true fetch-depth: 0 - name: Setup Hugo uses: peaceiris/actions-hugo@v2 with: hugo-version: &amp;#34;latest&amp;#34; - name: Build Web run: hugo - name: Deploy Web uses: peaceiris/actions-gh-pages@v3 with: PERSONAL_TOKEN: ${{ secrets.</description>
+    </item>
+  </channel>
+</rss>
