@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>https://yzccjg.github.io/blog/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>本博客使用教程 on My New Hugo Site</title>
+    <link>https://yzccjg.github.io/blog/%E6%9C%AC%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/</link>
+    <description>Recent content in 本博客使用教程 on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 28 Nov 2023 19:13:34 +0800</lastBuildDate>
-    <atom:link href="https://yzccjg.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://yzccjg.github.io/blog/%E6%9C%AC%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>使用hugo在github上部署个人博客的详细教程</title>
       <link>https://yzccjg.github.io/blog/%E6%9C%AC%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/%E4%BD%BF%E7%94%A8hugo%E5%9C%A8github%E4%B8%8A%E9%83%A8%E7%BD%B2%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%9A%84%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B/</link>
@@ -31,13 +31,6 @@ name: deploy on: push: workflow_dispatch: jobs: build: runs-on: ubuntu-latest st
       <guid>https://yzccjg.github.io/blog/%E6%9C%AC%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/hugo%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</guid>
       <description>基本配置
 将draft默认配置为false 修改archetypes目录下的default.md文件 draft: false 修改默认的作者 在主题下的hugo.toml文件中修改 author = &amp;#34;yzchugo.toml&amp;#34; </description>
-    </item>
-    <item>
-      <title>汇编语言</title>
-      <link>https://yzccjg.github.io/blog/%E5%B7%A5%E5%AD%A6/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</link>
-      <pubDate>Tue, 28 Nov 2023 17:05:31 +0800</pubDate>
-      <guid>https://yzccjg.github.io/blog/%E5%B7%A5%E5%AD%A6/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</guid>
-      <description></description>
     </item>
   </channel>
 </rss>
