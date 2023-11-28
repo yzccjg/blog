@@ -2,6 +2,7 @@
 title: "使用hugo在github上部署个人博客的详细教程"
 date: 2023-11-28T10:23:48+08:00
 draft: false
+weight: 1
 ---
 
 ## 使用hugo在github上部署个人博客的详细教程

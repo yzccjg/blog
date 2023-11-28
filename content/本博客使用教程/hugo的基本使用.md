@@ -3,6 +3,7 @@ title: "Hugo的基本使用"
 date: 2023-11-28T10:48:36+08:00
 draft: false
 author: "则成"
+weight: 2
 ---
 基本配置
 
