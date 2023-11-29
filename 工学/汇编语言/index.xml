@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>汇编语言 on My New Hugo Site</title>
+    <link>https://yzccjg.github.io/blog/%E5%B7%A5%E5%AD%A6/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/</link>
+    <description>Recent content in 汇编语言 on My New Hugo Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Nov 2023 10:54:41 +0800</lastBuildDate>
+    <atom:link href="https://yzccjg.github.io/blog/%E5%B7%A5%E5%AD%A6/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>寄存器</title>
+      <link>https://yzccjg.github.io/blog/%E5%B7%A5%E5%AD%A6/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/%E5%AF%84%E5%AD%98%E5%99%A8/</link>
+      <pubDate>Wed, 29 Nov 2023 11:02:23 +0800</pubDate>
+      <guid>https://yzccjg.github.io/blog/%E5%B7%A5%E5%AD%A6/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/%E5%AF%84%E5%AD%98%E5%99%A8/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
