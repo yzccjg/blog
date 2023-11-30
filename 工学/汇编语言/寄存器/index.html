@@ -211,14 +211,6 @@
                 </li>
             
         
-            
-                <li class="file">
-                    <a href="https://yzccjg.github.io/blog/%E5%B7%A5%E5%AD%A6/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/" title="./blog/%E5%B7%A5%E5%AD%A6/%E6%B1%87%E7%BC%96%E8%AF%AD%E8%A8%80/">
-                        汇编语言
-                    </a>
-                </li>
-            
-        
     </ul>
 
 
@@ -322,7 +314,7 @@
                         class="readtime"
                         title="Time to Read">
                         <i class="bi bi-clock"></i>
-                        0 mins to read
+                        1 min to read
                     </div>
                 
             </div>
@@ -406,15 +398,111 @@
         </div>
 
         
-            <nav id="TableOfContents"></nav>
+            <nav id="TableOfContents">
+  <ul>
+    <li><a href="#寄存器内存接口卡端口">寄存器、内存、接口卡、端口</a></li>
+  </ul>
+</nav>
         
 
 
         <div class="content">
             
-                <p class="no-content">
-                    No content on this page.
-                </p>
+                <h2 id="寄存器内存接口卡端口">寄存器、内存、接口卡、端口</h2>
+<p>要讲汇编语言，首先离不开的就是寄存器，汇编语言要操作硬件，本质就是读取硬件的信息和向硬件输出信息，读取的信息可以作为数据进行运算或者存储，也可以作为指令来执行，不论是作为数据使用，还是作为指令使用，从读取信息的角度来说，没有什么区别。</p>
+<p>从读取和输出信息的角度来理解问题，那么cpu直接打交道的硬件就包括寄存器、内存、接口卡、端口。</p>
+<ul>
+<li>
+<p>寄存器</p>
+<p>从名字就能看出，该法器就是暂时存储的意思，暂时存储多少呢，这就涉及数据长度的问题。</p>
+<ul>
+<li>
+<p>数据长度（所谓的数据大小 就是指： 数据的长度 或者 数据的多少，比如说1kB比256Byte大，并不是说这两个数字谁大，数字1和10谁大，如果1和10都是一个标记，比如1号人物和10号人物，1和10只是两个用来区分事物的不同信号，也不是说因为是从1数到10，所以10大，但是如果用来表示长度和多少，就是10大，比如10个苹果比1个苹果大，或者说多更贴切，那么这里的10和1分别代表的就是数量的大小或者长短）</p>
+<p>bit 位</p>
+<p>Byte 字节</p>
+<p>Kb或者KB(1Kb=1024个bit，1KB=1024个Byte)</p>
+<p>MB(1MB=1024KB)</p>
+<p>GB(1GB=1024MB)</p>
+</li>
+<li>
+<p>在计算机系统中，一般以8个bit为一个存储单元，也就是一个字节，用二进制表示一个字节的数据（意思就是说表示一个字节长度的数据），就是0000 1111，用十六进制表示一个字节，就是ACH，用八进制表示的话，就是一个八进制（O）的数据，其可表示的最大数据范围（0———该数据，例如06，其可表示的信号范围为00 01 02 03 04 05 06，一共可以表示7个信号，可以标识7个信号，那么对应二进制数据来说，可以使用多少来表示同样的范围，0b000 0b001 0b010 0b011 0b100 0b101 0b110，这也是就说0b110表示0-6一共7个信号，6也表示0-6共7个信号，如果使用3进制数，对应的又应该是多少呢？00 01 02 10 11 12 20 ，那就是用20表示，也就是说6=110=20 ）可以表示的bit数据的多少（），表示三个二进制位的数据长度。</p>
+</li>
+<li>
+<p>进制的表示</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">进制类别</th>
+<th style="text-align:center">对应英文</th>
+<th style="text-align:center">简写</th>
+<th style="text-align:center">数据表示习惯</th>
+<th style="text-align:center">数据表示总结</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">二进制</td>
+<td style="text-align:center">Binary</td>
+<td style="text-align:center">B或BIN</td>
+<td style="text-align:center">163=0b10100011</td>
+<td style="text-align:center">0b</td>
+</tr>
+<tr>
+<td style="text-align:center">八进制</td>
+<td style="text-align:center">Octal</td>
+<td style="text-align:center">O或OCT</td>
+<td style="text-align:center">163=0243</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="text-align:center">十进制</td>
+<td style="text-align:center">Decimal</td>
+<td style="text-align:center">D或DEC</td>
+<td style="text-align:center">163=163</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">十六进制</td>
+<td style="text-align:center">Hexadecimal</td>
+<td style="text-align:center">H或HEX</td>
+<td style="text-align:center">163=0xA3</td>
+<td style="text-align:center">0x</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>内存的通用表示（使用HEX进制0x）</p>
+<p>AB 01 25 32 25 21 FF F5  相当于 0xAB 0x01 0x25 0x32 0x25 0x21 0xFF 0xF5</p>
+<p>相当于 0b00011100  0b00011100  0b11110000  0b11110000  0b01010101  0b10101010  0b01011110</p>
+
+
+
+
+
+
+
+<div class="codeblock">
+    
+        <div class="copy-button-box">
+            <button class="copy-button" state="copy" data="1Byte%e7%9a%84%e6%95%b0%e6%8d%ae%e5%ae%b9%e9%87%8f%20=%200x**%280x00~0xFF%29%20=%200b****%20****%280b0~0b1111%201111%29%20=%20***%280~255%29%0a1Word%e7%9a%84%e6%95%b0%e6%8d%ae%e5%ae%b9%e9%87%8f%20=%202%20Byte%0a%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20=%200x****%280x0000~0xFFFF%29%20=%200b0b****%20****%20****%20****%20=%20*****%280~65535%29">
+                <i class="bi bi-copy"></i>
+            </button>
+        </div>
+    
+
+    
+        <pre><code>1Byte的数据容量 = 0x**(0x00~0xFF) = 0b**** ****(0b0~0b1111 1111) = ***(0~255)
+1Word的数据容量 = 2 Byte
+               = 0x****(0x0000~0xFFFF) = 0b0b**** **** **** **** = *****(0~65535)</code></pre>
+    
+</div>
+</li>
+</ul>
+<p><img src="F:%5C5blog%5Cstatic%5Cimage-20231130165834497.png" alt="image-20231130165834497"></p>
+</li>
+</ul>
+
             
         </div>
     </article>
@@ -462,7 +550,7 @@
                 <li>
                     
                         Word Count:
-                        0
+                        112
                     
                 </li>
             
