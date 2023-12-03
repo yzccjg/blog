@@ -21,7 +21,17 @@ draft: false
 author = "yzchugo.toml"
 ```
 
+- 在新标签页打开超链接
 
+  可在超链接添加title标签（通过实践，好像这个"Title"不加在超链接后面也无所谓）
 
+  ```
+  [Text](https://www.gohugo.io "Title")
+  ```
 
+  增加下面模板文件 layouts/_default/_markup/render-link.html
+
+  ```html
+  <a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}{{ if strings.HasPrefix .Destination "http" }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>
+  ```
 
