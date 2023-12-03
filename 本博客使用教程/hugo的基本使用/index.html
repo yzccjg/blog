@@ -443,6 +443,53 @@ draft: false</code></pre>
 author = &#34;yzchugo.toml&#34;</code></pre>
     
 </div>
+<ul>
+<li>
+<p>在新标签页打开超链接</p>
+<p>可在超链接添加title标签（通过实践，好像这个&quot;Title&quot;不加在超链接后面也无所谓）</p>
+
+
+
+
+
+
+
+<div class="codeblock">
+    
+        <div class="copy-button-box">
+            <button class="copy-button" state="copy" data="#ZgotmplZ">
+                <i class="bi bi-copy"></i>
+            </button>
+        </div>
+    
+
+    
+        <pre><code>[Text](https://www.gohugo.io &#34;Title&#34;)</code></pre>
+    
+</div>
+<p>增加下面模板文件 layouts/_default/_markup/render-link.html</p>
+
+
+
+
+
+
+
+<div class="codeblock">
+    
+        <div class="copy-button-box">
+            <button class="copy-button" state="copy" data="%3ca%20href=%22%7b%7b%20.Destination%20%7c%20safeURL%20%7d%7d%22%7b%7b%20with%20.Title%7d%7d%20title=%22%7b%7b%20.%20%7d%7d%22%7b%7b%20end%20%7d%7d%7b%7b%20if%20strings.HasPrefix%20.Destination%20%22http%22%20%7d%7d%20target=%22_blank%22%20rel=%22noopener%22%7b%7b%20end%20%7d%7d%3e%7b%7b%20.Text%20%7c%20safeHTML%20%7d%7d%3c/a%3e">
+                <i class="bi bi-copy"></i>
+            </button>
+        </div>
+    
+
+    
+        <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .Destination | safeURL }}&#34;</span><span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">with</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Title</span><span style="color:#960050;background-color:#1e0010">}}</span> <span style="color:#a6e22e">title</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ . }}&#34;</span><span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">end</span> <span style="color:#960050;background-color:#1e0010">}}{{</span> <span style="color:#a6e22e">if</span> <span style="color:#a6e22e">strings</span><span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">HasPrefix</span> <span style="color:#960050;background-color:#1e0010">.</span><span style="color:#a6e22e">Destination</span> <span style="color:#960050;background-color:#1e0010">&#34;</span><span style="color:#a6e22e">http</span><span style="color:#960050;background-color:#1e0010">&#34;</span> <span style="color:#960050;background-color:#1e0010">}}</span> <span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;noopener&#34;</span><span style="color:#960050;background-color:#1e0010">{{</span> <span style="color:#a6e22e">end</span> <span style="color:#960050;background-color:#1e0010">}}</span>&gt;{{ .Text | safeHTML }}&lt;/<span style="color:#f92672">a</span>&gt;</span></span></code></pre></div>
+    
+</div>
+</li>
+</ul>
 
             
         </div>
@@ -491,7 +538,7 @@ author = &#34;yzchugo.toml&#34;</code></pre>
                 <li>
                     
                         Word Count:
-                        10
+                        42
                     
                 </li>
             

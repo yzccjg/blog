@@ -30,7 +30,10 @@ name: deploy on: push: workflow_dispatch: jobs: build: runs-on: ubuntu-latest st
       <pubDate>Tue, 28 Nov 2023 10:48:36 +0800</pubDate>
       <guid>https://yzccjg.github.io/blog/%E6%9C%AC%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/hugo%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</guid>
       <description>基本配置
-将draft默认配置为false 修改archetypes目录下的default.md文件 draft: false 修改默认的作者 在主题下的hugo.toml文件中修改 author = &amp;#34;yzchugo.toml&amp;#34; </description>
+将draft默认配置为false 修改archetypes目录下的default.md文件 draft: false 修改默认的作者 在主题下的hugo.toml文件中修改 author = &amp;#34;yzchugo.toml&amp;#34; 在新标签页打开超链接
+可在超链接添加title标签（通过实践，好像这个&amp;quot;Title&amp;quot;不加在超链接后面也无所谓）
+[Text](https://www.gohugo.io &amp;#34;Title&amp;#34;) 增加下面模板文件 layouts/_default/_markup/render-link.html
+&amp;lt;a href=&amp;#34;{{ .Destination | safeURL }}&amp;#34;{{ with .Title}} title=&amp;#34;{{ . }}&amp;#34;{{ end }}{{ if strings.HasPrefix .Destination &amp;#34;http&amp;#34; }} target=&amp;#34;_blank&amp;#34; rel=&amp;#34;noopener&amp;#34;{{ end }}&amp;gt;{{ .Text | safeHTML }}&amp;lt;/a&amp;gt; </description>
     </item>
     <item>
       <title>资源导航</title>
@@ -40,6 +43,7 @@ name: deploy on: push: workflow_dispatch: jobs: build: runs-on: ubuntu-latest st
       <description> 搜索引擎
 百度|文心一言 程序员网站
 GitHub|
+学习网站
 哔哩哔哩 </description>
     </item>
     <item>
